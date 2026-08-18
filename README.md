@@ -20,5 +20,7 @@ Rules:
 3. When starting a new project (greenfield project and context) then you must check that the user has provided:
 
    3.1 Partial/full book page drafts that currently exist of the book to be written
+
    3.2. Book page draft examples or writing examples written by the user to understand and match the user's writing persona and style. The resulting persona and style must be documented in the provided framework folder structure for the MD files
+
    3.3. Analyze persona, writing style, book page drafts and resources to determine if there are any files still needed or any clarifying questions needed that need to be finalized before moving onto writing the book chapters one chapter at a time, in one automated stretch by the agent.
