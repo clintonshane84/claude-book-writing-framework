@@ -12,6 +12,7 @@ The framework will provide MD files which will provide:
 4. Must describe the high level main process in steps from beginning to end and every step is a process that is described in steps as part of the main high level process
 5. Persona and writing style of the author to be documented in a persona-writing-style.md file to be part of the resulting framework MD files to be read from the CLAUDE.md up.
 6. Resources like images and how they should be named to be automatically included in specific page names or numbers must be prescribed by the framework for the user to take advantage of.
+7. Claude SKILLS MD files for any skills included in the framework like book writing, book reviewing and book planning.
 
 Rules:
 1. Write easy to read and understand sentences and paragraphs with an emphasis on writing books for readers, mastering book writing each sentence and paragraph one at a time.
