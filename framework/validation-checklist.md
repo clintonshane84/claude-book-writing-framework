@@ -92,7 +92,29 @@ The author should provide or confirm:
 
 **Status**: [ ] Complete - [ ] Partial - [ ] Not Needed
 
-### 3.1 Source Materials
+### 3.1 Global Resources in `/inputs/` Folder
+- [ ] **Global resources organized** (if applicable to this book)
+  - Partially written draft pages/chapters
+  - Research reports, findings, and studies
+  - Reference materials and examples
+  - Supporting documents for entire book
+
+**If applicable, verify**:
+- [ ] `/inputs/` folder exists and is organized
+- [ ] Draft pages available in `/inputs/draft-pages/`
+- [ ] Research materials organized in `/inputs/research/`
+- [ ] Reference materials organized in `/inputs/references/`
+- [ ] All global resources are committed to git
+
+**If needed for this book, ask**:
+- Do you have partially written chapters or draft pages to provide?
+- Are there research reports, studies, or findings this book will reference?
+- Do you have reference materials (examples, templates, inspiration) to share?
+- Can you organize and upload these to `/inputs/` before we begin writing?
+
+**Note**: Claude will automatically use all files in `/inputs/` as context when writing chapters, so ensuring these are comprehensive and well-organized will improve chapter quality.
+
+### 3.2 Source Materials
 - [ ] **Research materials are available or accessible**
   - Books, articles, studies to reference
   - Data or statistics to include
@@ -105,13 +127,13 @@ The author should provide or confirm:
 - Do you have data, statistics, or studies to reference?
 - Can these materials be linked if not stored locally?
 
-### 3.2 Supporting Documents
+### 3.3 Supporting Documents
 - [ ] **Outline or structure document** (optional but helpful)
   - Chapter-by-chapter outline
   - High-level structure
   - Main points per chapter
 
-### 3.3 Images and Visual Assets
+### 3.4 Images and Visual Assets
 - [ ] **Images/graphics identified** (if needed)
   - List of images to create or source
   - Descriptions of needed diagrams

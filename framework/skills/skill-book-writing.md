@@ -43,6 +43,58 @@ Use this skill when you need help with:
 - Strengthens weak paragraphs
 - Improves overall flow and readability
 
+### 5. Uses Global Resources
+- Automatically incorporates materials from `/inputs/` folder
+- Integrates draft pages and research into chapters
+- References examples and style guidance
+- Ensures consistency with provided materials
+
+---
+
+## Using Global Resources from `/inputs/`
+
+This skill automatically uses materials from your `/inputs/` folder when writing chapters.
+
+### What Gets Included
+
+**Draft Pages** (`/inputs/draft-pages/`):
+- Partially written chapters or sections
+- Your existing openings or key passages
+- Outlines and notes you've prepared
+- Previous attempts you want to build on
+
+**Research** (`/inputs/research/`):
+- Studies and academic findings
+- Interview transcripts and expert quotes
+- Statistics and data
+- Case studies and examples
+
+**References** (`/inputs/references/`):
+- Writing style examples to match
+- Chapter structure examples
+- Technical terminology definitions
+- Inspirational passages and quotes
+
+### How It Works
+
+When you ask me to write a chapter:
+
+1. **Automatic Context**: I read all `/inputs/` files
+2. **Seamless Integration**: Research and drafts inform writing naturally
+3. **Smart Reference**: I know which materials apply to which chapters
+4. **Voice Consistency**: I match the examples you've provided
+5. **Content Continuity**: Partial drafts guide completion
+
+**You don't need to reference these files explicitly**—I automatically consider them.
+
+### Before Writing a Chapter
+
+Ensure `/inputs/` is organized with:
+- [ ] Relevant draft pages (if any)
+- [ ] Research for this chapter topic
+- [ ] Reference materials showing desired style
+- [ ] Any global resources that apply
+
 ---
 
 ## How to Use This Skill
@@ -55,6 +107,7 @@ Use this skill when you need help with:
 - Your persona-writing-style.md (for reference)
 - Any specific examples or data to include
 - Previous chapters (for continuity reference)
+- **Global resources in `/inputs/`** (I'll automatically include these)
 
 **I'll**:
 - Draft full chapter following outline
@@ -104,8 +157,9 @@ Use this skill when you need help with:
 1. Review chapter outline
 2. Review persona-writing-style.md
 3. Read previous chapter for continuity
-4. Gather research/examples for this chapter
-5. Consider target length and audience
+4. **Review relevant materials in `/inputs/`** (research, drafts, references)
+5. Gather research/examples for this chapter
+6. Consider target length and audience
 
 ### During Writing
 1. Start with opening hook

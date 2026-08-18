@@ -21,6 +21,7 @@ When you clone this template for a new book project, Claude will:
 
 ### Framework Organization
 - Framework files live in `/framework/` (guides, rules, processes, skills)
+- Global resources live in `/inputs/` (draft pages, research, references for entire book)
 - Book content lives in `/book/` (chapters, drafts, resources)
 - Each chapter has its own numbered folder: `01-intro/`, `02-chapter-one/`, etc.
 
@@ -80,6 +81,7 @@ Each phase contains sub-steps and uses specific skills to accomplish its goals.
 | `/framework/directory-structure.md` | How to organize book projects and chapter folders |
 | `/framework/resources-guide.md` | Managing images, assets, and reference materials |
 | `/framework/validation-checklist.md` | Detailed validation checklist (expanded version) |
+| `/inputs/README.md` | Guide for organizing global resources (drafts, research, references) |
 
 ### Process Files
 | File | Purpose |
@@ -110,6 +112,8 @@ Claude has specialized skills available to help with book writing tasks:
 
 **For new books**: Start with validation checklist above, then see `/framework/validation-checklist.md` for details
 
+**For global resources**: See `/inputs/README.md` for organizing draft pages, research, and references
+
 **For writing rules**: See `/framework/writing-rules.md`
 
 **For persona/style**: See `/framework/persona-writing-style.md`
@@ -120,7 +124,7 @@ Claude has specialized skills available to help with book writing tasks:
 
 **For book structure**: See `/framework/directory-structure.md`
 
-**For resources**: See `/framework/resources-guide.md`
+**For resource management**: See `/framework/resources-guide.md`
 
 ---
 

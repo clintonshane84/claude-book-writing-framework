@@ -34,6 +34,12 @@ your-book-project/
 │       ├── skill-copyediting.md
 │       └── skill-bibliography.md
 │
+├── inputs/                            # Global resources for entire book
+│   ├── README.md                      # Guide for organizing inputs
+│   ├── draft-pages/                   # Partially written chapters or pages
+│   ├── research/                      # Research documents and findings
+│   └── references/                    # Reference materials and examples
+│
 ├── book/                              # Your actual book content
 │   ├── 01-intro/                     # Chapter 1
 │   │   ├── chapter.md                # Main chapter content
@@ -75,6 +81,76 @@ your-book-project/
 │
 └── .gitignore                         # Git ignore file (optional)
 ```
+
+---
+
+## Global Inputs Folder Structure
+
+The `/inputs/` folder contains global resources used across your entire book. These materials are automatically available when Claude writes chapters.
+
+### `/inputs/` Structure
+```
+inputs/
+├── README.md                    # Guide and examples
+├── draft-pages/                 # Partially written chapters or pages
+│   ├── chapter-01-opening.md   # Draft that needs completion
+│   ├── chapter-05-rough.md     # Rough draft to expand
+│   └── key-sections.md         # Important passages to preserve
+├── research/                    # Research documents and findings
+│   ├── study-findings.md       # Academic research summary
+│   ├── interview-notes.md      # Interview transcripts
+│   ├── statistics-2024.md      # Data and statistics
+│   └── case-studies.md         # Real-world examples
+└── references/                  # Reference materials and examples
+    ├── writing-examples.md     # Writing style models
+    ├── book-structure-examples.md  # Chapter structure references
+    ├── technical-terminology.md    # Term definitions
+    └── inspirational-passages.md   # Quotes and inspiration
+```
+
+### What Goes in `/inputs/`
+
+**Draft Pages** - Partially written content:
+- Existing chapter openings or sections
+- Rough outlines or notes for chapters
+- Key passages you've already written and want to preserve
+- Previous attempts you want to build on
+
+**Research** - Materials that support your content:
+- Research papers and studies
+- Interview transcripts
+- Survey results and statistics
+- Case studies and examples
+- Industry reports and data
+
+**References** - Examples and inspiration:
+- Writing style examples you want to match
+- Chapter structure examples
+- Technical terms and definitions
+- Quotes and inspirational passages
+- Similar books or outlines
+
+### How Claude Uses `/inputs/`
+
+When you use **skill-book-writing.md** to draft chapters:
+
+1. **Automatic Context**: Claude automatically reads all files in `/inputs/` 
+2. **Seamless Integration**: Materials inform writing without manual reference
+3. **Continuity**: Partially-written content guides chapter completion
+4. **Research Integration**: Studies and findings are naturally woven in
+5. **Style Consistency**: Examples ensure matching your voice
+
+**You don't manually reference these files**—Claude considers them automatically.
+
+### Best Practices for Global Inputs
+
+- **Organize clearly**: Use consistent naming (e.g., `chapter-02-research.md`)
+- **Add descriptions**: Include at the top what each file contains
+- **Note relevance**: Indicate which chapters each input applies to
+- **Keep current**: Update as new research or ideas emerge
+- **Be selective**: Only include content that truly informs the book
+
+See `/inputs/README.md` for detailed examples and guidance.
 
 ---
 
