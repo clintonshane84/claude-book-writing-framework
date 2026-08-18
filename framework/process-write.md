@@ -28,13 +28,23 @@ Before writing, gather everything you need
 
 **Checklist**:
 - [ ] Chapter outline available (from Phase 1)
+- [ ] **Review `/inputs/` for relevant materials** (research, drafts, references)
 - [ ] Research materials gathered
 - [ ] Related writing samples reviewed (for voice reference)
 - [ ] persona-writing-style.md reviewed as reminder
 - [ ] Resources (images, data) identified
 - [ ] `/book/NN-chapter-name/chapter.md` file created and open
 
-**Duration**: 10-15 minutes
+**Duration**: 10-20 minutes (includes reviewing global resources)
+
+### Global Resources in `/inputs/`
+
+Before writing each chapter, check `/inputs/` for:
+- **Draft Pages**: Partially written content for this chapter
+- **Research**: Studies, data, or findings relevant to chapter topic
+- **References**: Writing examples or structural guidance
+
+All materials in `/inputs/` are automatically available as context when writing. You don't need to copy them—just ensure they're organized and committed to git.
 
 ### Step 2: Draft the Chapter
 Write the chapter from start to finish
