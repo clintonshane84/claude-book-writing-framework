@@ -24,10 +24,15 @@ This framework provides everything needed to write, review, and publish a book u
    - 1-2 writing samples (to establish voice)
    - Partial/full chapter drafts (if available)
    - Any research or reference materials
-4. **Work through validation** (see `/framework/validation-checklist.md`)
-5. **Execute the four-phase process**:
+4. **Organize global resources** in `/inputs/`:
+   - Draft pages in `/inputs/draft-pages/`
+   - Research materials in `/inputs/research/`
+   - Reference materials in `/inputs/references/`
+   - These are automatically available to Claude when writing
+5. **Work through validation** (see `/framework/validation-checklist.md`)
+6. **Execute the four-phase process**:
    - Phase 1: Plan (outline, structure, targets)
-   - Phase 2: Write (chapter-by-chapter drafting)
+   - Phase 2: Write (chapter-by-chapter drafting with global context)
    - Phase 3: Review (edit, polish, consistency)
    - Phase 4: Publish (compile, format, distribute)
 
@@ -46,29 +51,35 @@ claude-framework-book-writing/
 ├── README.md                                    # This file
 ├── CLAUDE.md                                    # Entry point (read first!)
 │
-└── framework/                                   # Core framework documentation
-    ├── writing-rules.md                         # Writing standards and best practices
-    ├── persona-writing-style.md                 # Template for author voice documentation
-    ├── writing-tools.md                         # Markdown format and technical reference
-    ├── directory-structure.md                   # How to organize book content
-    ├── resources-guide.md                       # Managing images, data, and materials
-    ├── validation-checklist.md                  # Pre-writing validation requirements
-    │
-    ├── process-plan.md                          # Phase 1: Planning
-    ├── process-write.md                         # Phase 2: Writing
-    ├── process-review.md                        # Phase 3: Review and Editing
-    ├── process-publish.md                       # Phase 4: Publishing
-    │
-    └── skills/                                  # Specialized skills for different tasks
-        ├── skill-book-planning.md               # Organize structure, create outlines
-        ├── skill-book-writing.md                # Draft chapters, develop content
-        ├── skill-book-reviewing.md              # Edit for quality and consistency
-        ├── skill-book-research.md               # Find and integrate research
-        ├── skill-content-editing.md             # Refine prose and language
-        ├── skill-chapter-organization.md        # Improve structure and flow
-        ├── skill-fact-checking.md               # Verify accuracy and sources
-        ├── skill-copyediting.md                 # Polish grammar and formatting
-        └── skill-bibliography.md                # Manage citations and bibliography
+├── framework/                                   # Core framework documentation
+│   ├── writing-rules.md                         # Writing standards and best practices
+│   ├── persona-writing-style.md                 # Template for author voice documentation
+│   ├── writing-tools.md                         # Markdown format and technical reference
+│   ├── directory-structure.md                   # How to organize book content
+│   ├── resources-guide.md                       # Managing images, data, and materials
+│   ├── validation-checklist.md                  # Pre-writing validation requirements
+│   │
+│   ├── process-plan.md                          # Phase 1: Planning
+│   ├── process-write.md                         # Phase 2: Writing
+│   ├── process-review.md                        # Phase 3: Review and Editing
+│   ├── process-publish.md                       # Phase 4: Publishing
+│   │
+│   └── skills/                                  # Specialized skills for different tasks
+│       ├── skill-book-planning.md               # Organize structure, create outlines
+│       ├── skill-book-writing.md                # Draft chapters, develop content
+│       ├── skill-book-reviewing.md              # Edit for quality and consistency
+│       ├── skill-book-research.md               # Find and integrate research
+│       ├── skill-content-editing.md             # Refine prose and language
+│       ├── skill-chapter-organization.md        # Improve structure and flow
+│       ├── skill-fact-checking.md               # Verify accuracy and sources
+│       ├── skill-copyediting.md                 # Polish grammar and formatting
+│       └── skill-bibliography.md                # Manage citations and bibliography
+│
+└── inputs/                                      # Global resources for entire book (per-project)
+    ├── README.md                                # Guide for organizing global resources
+    ├── draft-pages/                             # Partially written chapters or pages
+    ├── research/                                # Research materials, reports, findings
+    └── references/                              # Reference materials, examples, inspiration
 ```
 
 ## Key Documents
@@ -76,6 +87,11 @@ claude-framework-book-writing/
 ### Start Here
 - **CLAUDE.md** - Main entry point with validation checklist and process overview
 - **validation-checklist.md** - What to verify before starting writing
+
+### Global Resources
+- **inputs/README.md** - Guide for organizing draft pages, research, and references
+  - Automatically available to Claude when writing chapters
+  - Supports research-driven writing and completion of partial drafts
 
 ### Core Guidance
 - **writing-rules.md** - Technical, craft, and process guidance
@@ -110,10 +126,11 @@ Map the book's structure, create detailed chapter outline, and establish writing
 - **Output**: Outline, writing timeline, chapter targets
 
 ### Phase 2: Write
-Draft chapters one-by-one, following your outline and established voice.
+Draft chapters one-by-one, following your outline and established voice. Claude automatically uses all files in `/inputs/` for research, examples, and context.
 - **Read**: `/framework/process-write.md`
 - **Use Skill**: `skill-book-writing.md`
-- **Output**: Complete chapter drafts
+- **Global Context**: All materials in `/inputs/` automatically inform writing
+- **Output**: Complete chapter drafts informed by your research and references
 
 ### Phase 3: Review
 Edit chapters for clarity, consistency, and quality at multiple levels.
@@ -130,6 +147,63 @@ Edit chapters for clarity, consistency, and quality at multiple levels.
 Compile your chapters into a complete manuscript and prepare for distribution.
 - **Read**: `/framework/process-publish.md`
 - **Output**: PDF, EPUB, HTML, or print-ready manuscript
+
+## Global Resources for Your Book
+
+The framework includes a dedicated `/inputs/` folder where you can organize materials used throughout your entire book:
+
+### What Goes in `/inputs/`
+
+**Draft Pages** (`/inputs/draft-pages/`)
+- Partially written chapters or sections
+- Existing openings or key passages you want to preserve
+- Previous attempts or rough outlines
+- Sections you want Claude to expand or refine
+
+**Research Materials** (`/inputs/research/`)
+- Academic papers and studies
+- Interview transcripts and expert quotes
+- Statistical data and findings
+- Case studies and real-world examples
+- Industry reports and research notes
+
+**Reference Materials** (`/inputs/references/`)
+- Writing style examples you want to match
+- Chapter structure examples or templates
+- Technical terminology definitions
+- Inspirational passages or quotes
+- Similar books or outlines for reference
+
+### How Claude Uses Global Resources
+
+When you use **skill-book-writing.md** to draft chapters:
+1. Claude automatically reads ALL files in `/inputs/`
+2. These materials inform chapter writing without manual reference
+3. Draft pages guide chapter completion
+4. Research findings are naturally integrated
+5. Reference materials ensure consistent voice and style
+
+**Important**: You don't need to mention `/inputs/` files in your requests—Claude automatically considers them.
+
+### Example Usage
+
+**Scenario 1: Research-Driven Chapter**
+- You place study findings in `/inputs/research/study-findings.md`
+- You place statistics in `/inputs/research/statistics-2024.md`
+- Claude writes Chapter 3 and naturally integrates the research
+- Claims are supported by your provided data
+
+**Scenario 2: Completing Partial Drafts**
+- You have a partial chapter opening in `/inputs/draft-pages/chapter-04-opening.md`
+- You request Chapter 4 to be written
+- Claude reads your partial draft and completes it in your voice
+- Your existing opening is preserved and expanded upon
+
+**Scenario 3: Maintaining Writing Style**
+- You place your writing examples in `/inputs/references/writing-examples.md`
+- You place chapter structure guides in `/inputs/references/structure-examples.md`
+- Claude writes chapters matching your established style and structure
+- Consistency is maintained across all chapters
 
 ## Writing Rules and Standards
 
@@ -169,6 +243,12 @@ your-book-project/
 ├── framework/                    # Framework files (reference only)
 │   └── [All framework files - used as reference]
 │
+├── inputs/                       # Global resources for entire book
+│   ├── README.md                # Guide for organizing global resources
+│   ├── draft-pages/             # Partially written chapters or pages
+│   ├── research/                # Research materials, reports, findings
+│   └── references/              # Reference materials, examples, inspiration
+│
 ├── book/                         # Your actual book content
 │   ├── 01-introduction/
 │   │   ├── chapter.md           # Main chapter content
@@ -188,6 +268,15 @@ your-book-project/
     └── personas/                # Your persona-writing-style.md
 ```
 
+### Global Resources in `/inputs/`
+The `/inputs/` folder contains materials that inform the entire book:
+- **Draft pages**: Partially written chapters or sections
+- **Research**: Academic papers, studies, interview notes, statistics
+- **References**: Writing examples, style guides, inspirational passages
+
+When using skill-book-writing.md to draft chapters, Claude **automatically reads all files in `/inputs/`** and uses them as context. This enables research-driven writing and supports completion of partially-written content without manual reference.
+
+### Chapter Organization
 Each chapter gets its own numbered folder:
 - `chapter.md` - Final, published chapter content
 - `drafts/` - Work-in-progress and revision versions
@@ -205,8 +294,12 @@ Before writing, verify you have:
 - [ ] Partial or full chapter drafts (if available)
 - [ ] Research materials or resources needed
 - [ ] Approximate chapter count
+- [ ] Global resources organized in `/inputs/` (if applicable):
+  - [ ] Draft pages in `/inputs/draft-pages/`
+  - [ ] Research materials in `/inputs/research/`
+  - [ ] References in `/inputs/references/`
 
-See `/framework/validation-checklist.md` for full checklist.
+See `/framework/validation-checklist.md` for full checklist and `/inputs/README.md` for organizing global resources.
 
 ### Step 2: Document Your Voice
 Create or update `persona-writing-style.md` with:
@@ -377,10 +470,12 @@ All 9 skills: 200-300 lines each with practical guidance
 
 ### During Writing
 - [ ] Follow the outline loosely (not rigidly)
+- [ ] Ensure `/inputs/` is organized with research and references
 - [ ] Write regularly and commit frequently
 - [ ] Read previous chapters for continuity
 - [ ] Refer to persona-writing-style.md often
 - [ ] Don't perfect while drafting
+- [ ] Claude automatically uses `/inputs/` materials for context
 
 ### During Review
 - [ ] Read complete chapters without stopping first
@@ -412,6 +507,12 @@ All 9 skills: 200-300 lines each with practical guidance
 
 ### Q: What if I get stuck?
 **A**: Use the specialized skills. Each provides detailed help for specific challenges.
+
+### Q: How do I use global resources?
+**A**: Place your draft pages, research, and reference materials in the `/inputs/` folder (organized in subfolders). Claude automatically reads all files in `/inputs/` when writing chapters. No need to manually reference them—they inform the writing automatically.
+
+### Q: What should go in `/inputs/`?
+**A**: Anything that informs your book: partial chapter drafts, research findings, interview notes, statistics, writing style examples, and reference materials. See `/inputs/README.md` for detailed guidance.
 
 ## Support and Feedback
 
